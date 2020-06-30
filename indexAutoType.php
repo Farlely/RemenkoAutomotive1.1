@@ -1,23 +1,22 @@
 <?php
 require_once ('DakdragerDatabase.php');
-require_once ('hearder.php');
+require_once ('headerindex.php');
 
 ?>
+<link rel="stylesheet" type="text/css" href="indexStyle.css">
 <br/><br/> <br/><br/><br/><br/>
 <center>
+  <div class="container">
   <h1> Toevoeg Autptype </h1>
 <form method="post" action ="addAutotype.php">
-<table width="400" border="0" cellspacing="1" cellpadding="2">
-<tr>
-<td width="100"> typenaam:</td>
-<td><input name="typenaam" type="text" placeholder = "Vul typenaam in..." required>*</td>
-</tr>
+  <div class="form-group">
+<label for="typenaam"> typenaam:</label>
+<input name="typenaam" type="text"  class="form-control" placeholder = "Vul typenaam in..." required>
+</div>
 
 <tr>
-<td width="100"> modelcode:</td>
-<td><input name="modelcode" type="text" placeholder = "Vul modelcode' in..." required>*</td>
-</tr>
-
+<label for="modelcode"> modelcode:</label>
+<input name="modelcode" type="text"  class="form-control" placeholder = "Vul modelcode' in..." required>
 
 <tr>
 <tr>
@@ -25,8 +24,7 @@ require_once ('hearder.php');
 <td><input type="submit" value="Klant toevoegen"></td>
 </tr>
 
-</table>
-</form>
+
 </div>
 
 </div>

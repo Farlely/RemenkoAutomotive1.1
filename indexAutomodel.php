@@ -1,33 +1,27 @@
 <?php
 require_once ('DakdragerDatabase.php');
-require_once ('hearder.php');
+require_once ('headerindex.php');
 
 
 ?>
 
-
+<link rel="stylesheet" type="text/css" href="indexStyle.css">
 <center>
-  <h1> Toeveog Automodel </h1>
+  <br><br><br><br><br><br><br><br><br><br>
+  <div class="container">
+  <h2> Toevoeg Automodel </h2>
 <form method="post" action ="addAutomodel.php">
-<table width="400" border="0" cellspacing="1" cellpadding="2">
-<tr>
-<td width="100"> Modelnaam:</td>
-<td><input name="modelnaam" type="text" placeholder = "Vul Automodel in..." required>*</td>
-</tr>
+<div class="form-group">
+<label for="Merknaam"> Modelnaam:</label>
+<input name="modelnaam" type="text"  class="form-control" placeholder = "Vul Automodel in..." required>
+</div>
 
-<tr>
-<td width="100"> Merkcode:</td>
-<td><input name="merkcode" type="text" placeholder = "Vul Merkcode in..." required>*</td>
-</tr>
-
-
-<tr>
-<tr>
+<div class="form-group">
+<label for="Merkcode"> Merkcode:</label>
+<input name="merkcode" type="text" class="form-control" placeholder = "Vul Merkcode in..." required>
 <td width="100">&nbsp;</td>
-<td><input type="submit" value="Klant toevoegen"></td>
-</tr>
+<td><input type="submit" name="btn_submit" value="Automodel toevoegen"></td>
 
-</table>
 </form>
 </div>
 
@@ -71,7 +65,7 @@ require_once ('hearder.php');
   </td>
 
   <td>
-  <button type="button" class="btn btn-warning"><a href="indexAutoType.php">Toegevoegd</a></button>
+  <button type="button" style=" background-color:#FAC400;font-size:200%;font-family:verdana;display:block;margin-bottom:2%; margin-right:30%;margin-left:10%;"><a href="indexAutoType.php">Toegevoegd</a></button>
   </td>
 </tr>
 <?php

@@ -1,9 +1,10 @@
 <?php
 require_once ('DakdragerDatabase.php');
-require_once ('hearder.php');
+require_once ('headerindex.php');
+
  ?>
 
-
+  <link rel="stylesheet" type="text/css" href="indexStyle.css">
 <div>
 <div class="center"><a class="btn btn-primary btn-lg" style=" font-size:300%;font-family:verdana;margin-left:30%;margin-right:30%;display:block;margin-top:22%;margin-bottom:0%" href="add.php" role="button">Add Automerk </a><br/><br/></div>
 </div>

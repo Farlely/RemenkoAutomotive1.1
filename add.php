@@ -1,6 +1,6 @@
 <?php
 require_once ('DakdragerDatabase.php');
-require_once ('hearder.php');
+require_once ('headerindex.php');
 
 if(isset($_POST['btn_submit'])) {
 
@@ -21,18 +21,17 @@ if(isset($_POST['btn_submit'])) {
   }
 }
 ?>
-
-<h2>Toevoeg Auto Merknaam</h2>
+<br><br><br><br><br><br><br><br><br><br>
+<div class="container">
+<h2>Toevoeg AutoMerk</h2>
 <form action="" method="post">
-<table cellpadding="5px">
-  <tr>
-    <td>Merknaam</td>
-    <td><input type="text" name="Merknaam"></td>
-  </tr>
+  <div class="form-group">
+  <label for="Merknaam">Merknaam:</label>
+    <input type="text" class="form-control" name="Merknaam">
+  </div>
 
-  <tr>
-    <td></td>
-    <td><input type="submit" name="btn_submit" a href="index.php"></td>
-  </tr>
-</table>
+    <input type="submit" name="btn_submit" a href="indexAutoMerk.php">
+
+
 </form>
+</div>

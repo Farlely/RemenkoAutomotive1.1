@@ -1,23 +1,22 @@
 <?php
 require_once ('DakdragerDatabase.php');
-require_once ('indexStyle.css');
-
-
+require_once ('headerindex.php');
 ?>
+<link rel="stylesheet" type="text/css" href="indexStyle.css">
 <br/><br/> <br/><br/><br/><br/>
 <center>
+  <div class="container">
   <h1> Toevoeg bouwjaar </h1>
 <form method="post" action ="addBouwjaar.php">
-<table width="400" border="0" cellspacing="1" cellpadding="2">
-<tr>
-<td width="100"> Modelnaam:</td>
-<td><input name="bouwjaardatum" type="text" placeholder = "Vul bouwjaardatum in..." required>*</td>
-</tr>
+<div class="form-group">
+<label for="Modelnaam"> Modelnaam:</label>
+<input name="bouwjaardatum" type="text"  class="form-control" placeholder = "Vul bouwjaardatum in..." required>
+</div>
 
-<tr>
-<td width="100"> Merkcode:</td>
-<td><input name="typecode" type="text" placeholder = "Vul typecode' in..." required>*</td>
-</tr>
+<div class="form-group">
+<label for="merkcode"> Merkcode:</label>
+<input name="typecode" type="text" class="form-control" placeholder = "Vul typecode' in..." required>
+</div>
 
 
 <tr>
@@ -70,7 +69,7 @@ require_once ('indexStyle.css');
   </td>
 
   <td>
-  <button type="button" class="btn btn-warning"><a href="indexAutobouwjaar.php">Toegevoegd</a></button>
+  <button type="button" class="btn btn-warning"><a href="index.html">Toegevoegd</a></button>
   </td>
 </tr>
 
