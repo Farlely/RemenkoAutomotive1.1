@@ -1,0 +1,46 @@
+
+select{
+
+  font-size: 36px;
+  width:400px;
+}
+@media screen and (min-width: 840px) {
+  body {
+    background-color: lavender;
+
+
+  }
+
+ select{
+
+   background-color: red;
+   font-size: 36px;
+   width:600px
+
+ }
+ div.merk{
+
+   float:left;
+   padding-left: 50px;
+   padding-top:  70px;
+ }
+ div.model{
+
+   float:left;
+   padding-left: 50px;
+   padding-top:  50px;
+ }
+ div.type{
+
+   float:left;
+   padding-left: 50px;
+   padding-top:  30px;
+ }
+ }
+ div.bouwjaar{
+
+   float:left;
+   padding-left: 50px;
+   padding-top:  10px;
+ }
+}
