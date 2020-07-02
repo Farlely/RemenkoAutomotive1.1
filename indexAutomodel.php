@@ -47,7 +47,7 @@ require_once ('headerindex.php');
 </thead>
 <tbody>
 <?php
- $stmt = $conn->prepare("SELECT * FROM Model ORDER BY Modelcode");
+ $stmt = $con->prepare("SELECT * FROM Model ORDER BY Modelcode");
  $stmt->execute();
  $results = $stmt->fetchALL();
  foreach ($results as $row) {

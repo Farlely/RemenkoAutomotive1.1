@@ -24,7 +24,7 @@ require_once ('headerindex.php');
 
 <tbody>
 <?php
- $stmt = $conn->prepare("SELECT * FROM Merk ORDER BY Merkcode");
+ $stmt = $con->prepare("SELECT * FROM Merk ORDER BY Merkcode");
  $stmt->execute();
  $results = $stmt->fetchALL();
  foreach ($results as $row) {

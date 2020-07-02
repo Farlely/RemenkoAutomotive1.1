@@ -48,7 +48,7 @@ require_once ('headerindex.php');
 </thead>
 <tbody>
 <?php
- $stmt = $conn->prepare("SELECT * FROM Type ORDER BY Typecode");
+ $stmt = $con->prepare("SELECT * FROM Type ORDER BY Typecode");
  $stmt->execute();
  $results = $stmt->fetchALL();
  foreach ($results as $row) {

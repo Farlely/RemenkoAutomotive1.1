@@ -1,19 +1,17 @@
 <?php
 require_once ('DakdragerDatabase.php');
 if(isset($_POST['btn_submit'])){
-  $automerkcode = $_POST['AutomerkCode'];
-   $automerk = $_POST['Automerk'];
-   $automodelcode = $_POST['AutomodelCode'];
-
-   if(!empty($automerkcode)){
+  $merkcode = $_POST['merkcode'];
+   $merknaam = $_POST['merknaam'];
+   if(!empty($merknaam)){
      try{
-      $stmt = $con->prepare("UPDATE Merk set Merkcode= :automerkcode, Merknaam= :automerk,
-                       Modelcode = :automodelcode WHERE Merkcode = :id");
-      $stmt->execute(array(':Merk' =>$automerk,':Modelnaam' =>$automodelcode , 'id'=>$automerkcode));
+      $stmt = $con->prepare("UPDATE Merk set Merknaam= :naam,
+                   WHERE Merkcode = :id");
+      $stmt->execute(array(':naam' =>$merknaam,'id'=>$merkcode));
      if($stmt){
-       header('index.php');
+       header('Location:indexAutomodel.php');
      }
-      header('Location:index.php');
+      header('Location:indexAutomodel.php');
      }catch(PDOException $ex){
         echo $ex->getMessage();
      }
@@ -23,22 +21,19 @@ if(isset($_POST['btn_submit'])){
 
 
 }
-$automerkcode = 0;
-$automerk = '';
-$automodelcode= '';
+$merkcode = 0;
+$merknaam = '';
+
 if (isset($_GET['id'])){
      $id = $_GET['id'];
-
      $stmt = $con->prepare('SELECT * FROM Merk WHERE Merkcode = :id');
      $stmt->execute(array(':id'=>$id));
      $row = $stmt->fetch();
-     $automerkcode = $row['Merkcode'];
-     $automerk = $row['Merk'];
-     $automodelcode = $row['Modelcode'];
-
+     $merkcode = $row['Merkcode'];
+     $merknaam = $row['Merknaam'];
 }
  ?>
- <?php require 'hearder.php'; ?>
+
  <div class="container">
    <div class="card mt-5">
      <div class="card-header">
@@ -48,15 +43,12 @@ if (isset($_GET['id'])){
 <form action="" method="post">
 
   <div class="form-group">
-  <label for="automerk">AutomerkCode</label>
-  <td><input type="text" name="automerk" value="<?=$automerk;?>" class="form-control"></td>
+  <label for="L">Merknaam</label>
+  <td><input type="text" name="merknaam" value="<?=$merknaam;?>" class="form-control"></td>
 </div>
+
 <div class="form-group">
-  <label for="AutomodelCode">AutomodelCode</label>
-  <td><input type="nummer" name="automodelcode" value="<?=$automodelcode;?>" class="form-control"></td>
-</div>
-<div class="form-group">
-  <td><input type="hidden" name="automerkcode" value="<?=$automerkcode;?>"></td>
+  <td><input type="hidden" name="merkcode" value="<?=$merkcode;?>"></td>
 </div>
 <div class="form-group">
 

@@ -5,7 +5,7 @@
    try{
     $stmt = $con->prepare("DELETE FROM Merk Where Merkcode=?");
     $stmt->execute(array($id));
-    header('Location:index.php');
+    header('Location:indexAutoMerk.php');
    } catch (PDOException $ex){
 
 echo $ex->getMessage();
